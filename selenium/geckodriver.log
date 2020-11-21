@@ -549,3 +549,88 @@ JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2
 JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
 1605961666889	Marionette	INFO	Stopped listening on port 41519
 JavaScript error: resource://gre/modules/Sqlite.jsm, line 1031: Error: Sqlite.jsm has been shutdown. Cannot open connection to: /tmp/rust_mozprofileCdGJ1G/protections.sqlite
+1605964831750	geckodriver	INFO	Listening on 127.0.0.1:48693
+1605964831755	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile8xKjcu"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605964834442	Marionette	INFO	Listening on port 45839
+1605964834491	Marionette	WARN	TLS certificate errors will be ignored for this session
+1605964840575	Marionette	INFO	Stopped listening on port 45839
+1605964851679	geckodriver	INFO	Listening on 127.0.0.1:51381
+1605964851684	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileT54dZY"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605964854229	Marionette	INFO	Listening on port 43989
+1605964854314	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
+1605964890653	geckodriver	INFO	Listening on 127.0.0.1:40519
+1605964890658	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWMXscd"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605964893072	Marionette	INFO	Listening on port 40727
+1605964893207	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=pt&net1=me,m1&net2=m3,n3,o3&net3=m4,n4, line 478: TypeError: document.getElementById(...) is null
+1605964897018	Marionette	INFO	Stopped listening on port 40727
+1605965129179	geckodriver	INFO	Listening on 127.0.0.1:54355
+1605965129183	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileFlxtAH"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605965131817	Marionette	INFO	Listening on port 34269
+1605965131913	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=cl&net1=sm,ep&net2=c3,e3,tm&net3=m4, line 477: TypeError: document.getElementById(...) is null
+1605965362387	addons.xpi	ERROR	System addon update list error Error: Failed downloading XML, status: 0, reason: error
+1605965440883	geckodriver	INFO	Listening on 127.0.0.1:52227
+1605965440887	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileWQNO5s"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605965443518	Marionette	INFO	Listening on port 39619
+1605965443618	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=cl&net1=sm,ep&net2=c3,e3,tm&net3=m4, line 477: TypeError: document.getElementById(...) is null
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c.js, line 649: unreachable code after return statement
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/openlayers/OpenLayers-2.13.1_fix/OpenLayers.js, line 185: TypeError: this.size is null
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/openlayers/OpenLayers-2.13.1_fix/OpenLayers.js, line 185: TypeError: this.size is null
+1605965450032	Marionette	INFO	Stopped listening on port 39619
+JavaScript error: http://maps.google.com/maps-api-v3/api/js/42/9/intl/en_gb/common.js, line 59: NS_ERROR_NOT_INITIALIZED: 
+1605965709750	geckodriver	INFO	Listening on 127.0.0.1:36319
+1605965709755	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofileV6BuZ1"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1605965712393	Marionette	INFO	Listening on port 46199
+1605965712494	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=br&net1=te&net2=t4&net3=v4, line 459: TypeError: document.getElementById(...) is null
+JavaScript error: http://www.three.co.uk/static/ThreeWeb/intl-roaming-new/js/intl-roaming-template.min.js, line 1: ReferenceError: Handlebars is not defined
+JavaScript error: https://assets.sitescdn.net/answers/v0.9.6/answers.min.js, line 1: Error: Failed to add component
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c_cta.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/nipro_gbhu_v2_cta.php?cc=cl&net1=sm,ep&net2=c3,e3,tm&net3=m4, line 477: TypeError: document.getElementById(...) is null
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c.js, line 649: unreachable code after return statement
+JavaScript warning: http://covmaps-gbhu.europa.uk.com/apps/nipro_support_gbhu_v2c.js, line 649: unreachable code after return statement
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/openlayers/OpenLayers-2.13.1_fix/OpenLayers.js, line 185: TypeError: this.size is null
+JavaScript error: http://covmaps-gbhu.europa.uk.com/apps/openlayers/OpenLayers-2.13.1_fix/OpenLayers.js, line 185: TypeError: this.size is null
+SourceActor threw an exception: [Exception... "Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]"  nsresult: "0x80470002 (NS_BASE_STREAM_CLOSED)"  location: "JS frame :: resource://devtools/shared/DevToolsUtils.js :: onResponse :: line 567"  data: no]
+Stack: onResponse@resource://devtools/shared/DevToolsUtils.js:567:34
+onStopRequest@resource://gre/modules/NetUtil.jsm:128:18
+Line: 567, column: 0
+console.error: ({})
+JavaScript error: resource://devtools/shared/DevToolsUtils.js, line 567: NS_BASE_STREAM_CLOSED: Component returned failure code: 0x80470002 (NS_BASE_STREAM_CLOSED) [nsIInputStream.available]
