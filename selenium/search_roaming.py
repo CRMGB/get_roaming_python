@@ -10,6 +10,8 @@ def start_selenium():
     portugal_roaming(driver)
     chile_roaming(driver)
     china_roaming(driver)
+    s_africa_roaming(driver)
+    madagascar_roaming(driver)
 
     driver.close()
 
@@ -69,7 +71,6 @@ def portugal_roaming(driver):
     print("portugal_allowances--> ", portugal_allowances)
 
 
-
 def chile_roaming(driver):
 
     driver.get("http://www.three.co.uk/support/roaming/chile")
@@ -97,10 +98,43 @@ def chile_roaming(driver):
 
     print("chile_allowances--> ", chile_allowances)
 
-#China
+
+def s_africa_roaming(driver):
+
+    driver.get(
+        "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306363715"
+        )
+
+    root = lxml.html.fromstring(driver.page_source)
+
+    uk_search = 'UK'
+    re_call_search = 'calls from any number'
+    re_internet = 'Using internet and data'
+    count = 0
+    s_africa_allowances = {}
+    for row in root.xpath('.//table[@class="roaming-charges-table"]//tr'):
+        headers = row.xpath('.//th/text()')
+        cells = row.xpath('.//td/text()')
+        #Search for the right allowances
+        filter_header = [
+            header for header in headers 
+            if re.search(uk_search, header) 
+            or re.search(re_call_search, header)
+            or re.search(re_internet, header)
+            ]
+         
+
+        if len(filter_header) !=0:
+            s_africa_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip() }
+
+    print("s_africa_allowances--> ", s_africa_allowances)
+
+
 def china_roaming(driver):
 
-    driver.get("http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306373940")
+    driver.get(
+        "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306373940"
+        )
 
     root = lxml.html.fromstring(driver.page_source)
 
@@ -121,9 +155,39 @@ def china_roaming(driver):
             ] 
 
         if len(filter_header) !=0:
-            china_allowances[filter_header[0]] = {'Cost': cells[0] }
+            china_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip() }
 
-    print("china_allowances--> ", chile_allowances)
+    print("china_allowances--> ", china_allowances)
+
+def madagascar_roaming(driver):
+
+    driver.get(
+        "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306362583"
+        )
+
+    root = lxml.html.fromstring(driver.page_source)
+
+    uk_search = 'UK'
+    re_call_search = 'calls from any number'
+    re_internet = 'Using internet and data'
+    count = 0
+    madagascar_allowances = {}
+    for row in root.xpath('.//table[@class="roaming-charges-table"]//tr'):
+        headers = row.xpath('.//th/text()')
+        cells = row.xpath('.//td/text()')
+        #Search for the right allowances
+        filter_header = [
+            header for header in headers 
+            if re.search(uk_search, header) 
+            or re.search(re_call_search, header)
+            or re.search(re_internet, header)
+            ] 
+
+        if len(filter_header) !=0:
+            madagascar_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip()}
+
+    print("madagascar_allowances--> ", madagascar_allowances)
+
 
 if __name__ == '__main__':
     start_selenium()
