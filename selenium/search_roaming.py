@@ -6,7 +6,7 @@ from selenium.webdriver.common.keys import Keys
 
 def start_selenium():
     driver = webdriver.Firefox()
-    
+
     brazil_roaming(driver)
     portugal_roaming(driver)
     chile_roaming(driver)
@@ -20,67 +20,83 @@ def brazil_roaming(driver):
 
     driver.get("http://www.three.co.uk/support/roaming/brazil")
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    if not re.search("Mobile roaming in Brazil - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
+    
+    root = lxml.html.fromstring(driver.page_source)
 
-    filter_header, cells = filter_table(root_page)
+    table = './/table[@class="clearfix"]//tr'
 
-    brazil_allowances[filter_header[0]] = {'With allowance remaining': cells[0], 'Outside your allowance': cells[1] }
+    root = lxml.html.fromstring(driver.page_source, table)
 
-    print("brazil_allowances--> ",brazil_allowances)
+    brazil_allowances = extract_table(root, table)
+
+    print("brazil--> ", brazil_allowances)
 
 
 def portugal_roaming(driver):
 
     driver.get("http://www.three.co.uk/support/roaming/portugal")
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    if not re.search("Mobile roaming in Portugal - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
 
-    filter_header, cells = filter_table(root_page)
+    table = './/table[@class="clearfix"]//tr'
 
-    portugal_allowances[filter_header[0]] = {'With allowance remaining': cells[0], 'Outside your allowance': cells[1] }
+    root = lxml.html.fromstring(driver.page_source, table)
 
-    print("portugal_allowances--> ", portugal_allowances)
+    portugal_allowances = extract_table(root, table)
+
+    print("portugal--> ", portugal_allowances)
 
 
 def chile_roaming(driver):
 
     driver.get("http://www.three.co.uk/support/roaming/chile")
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    if not re.search("Mobile roaming in Chile - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
 
-    filter_header, cells = filter_table(root_page)
+    table = './/table[@class="clearfix"]//tr'
 
-    chile_allowances[filter_header[0]] = {'With allowance remaining': cells[0], 'Outside your allowance': cells[1] }
+    root = lxml.html.fromstring(driver.page_source, table)
 
-    print("chile_allowances--> ", chile_allowances)
+    chile_allowances = extract_table(root, table)
+
+    print("chile--> ", chile_allowances)
 
 
 def s_africa_roaming(driver):
 
     driver.get(
         "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306363715"
-    )
+        )
+    if not re.search("Mobile roaming - Roaming & international - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    table ='.//table[@class="roaming-charges-table"]//tr'
 
-    filter_header, cells = filter_table(root_page)
+    root = lxml.html.fromstring(driver.page_source)
 
-    s_africa_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip() }
+    s_africa_allowances = extract_table(root, table)
 
-    print("s_africa_allowances--> ", s_africa_allowances)
+    print("s_africa--> ", s_africa_allowances)
 
 
 def china_roaming(driver):
 
     driver.get(
         "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306373940"
-    )
+        )
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    if not re.search("Mobile roaming - Roaming & international - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
 
-    filter_header, cells = filter_table(root_page)
+    table ='.//table[@class="roaming-charges-table"]//tr'
 
-    china_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip() }
+    root = lxml.html.fromstring(driver.page_source)
+
+    china_allowances = extract_table(root, table)
 
     print("china_allowances--> ", china_allowances)
 
@@ -88,25 +104,26 @@ def madagascar_roaming(driver):
 
     driver.get(
         "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306362583"
-    )
+        )
+    if not re.search("Mobile roaming - Roaming & international - Support - Three", driver.title):
+        raise Exception("Unable to load google page!")
 
-    root_page = lxml.html.fromstring(driver.page_source)
+    table ='.//table[@class="roaming-charges-table"]//tr'
 
-    filter_header, cells = filter_table(root_page)
+    root = lxml.html.fromstring(driver.page_source)
 
-    madagascar_allowances = {}
-
-    madagascar_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip()}
+    madagascar_allowances = extract_table(root, table)
 
     print("madagascar_allowances--> ", madagascar_allowances)
 
 
-def filter_table(root_page):
-
+def extract_table(root, table):
+    table_allowances = {}
     uk_search = 'UK'
     re_call_search = 'calls from any number'
     re_internet = 'Using internet and data'
-    for row in root_page.xpath('.//table[@class="roaming-charges-table"]//tr'):
+
+    for row in root.xpath(table):
         headers = row.xpath('.//th/text()')
         cells = row.xpath('.//td/text()')
         #Search for the right allowances
@@ -115,10 +132,14 @@ def filter_table(root_page):
             if re.search(uk_search, header) 
             or re.search(re_call_search, header)
             or re.search(re_internet, header)
-        ] 
+            ] 
 
-        if len(filter_header) !=0:
-            return filter_header, cells
+        if len(filter_header) !=0 and len(cells)>1:
+            if re.search("roaming-charges-table", table):
+                table_allowances[filter_header[0]] = {'Cost': cells[1].split('\n',1)[0].lstrip()}
+            else:
+                table_allowances[filter_header[0]] = {'With allowance remaining': cells[0], 'Outside your allowance': cells[1]}
+    return table_allowances
 
 if __name__ == '__main__':
     start_selenium()
