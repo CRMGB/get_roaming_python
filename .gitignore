@@ -1,2 +1,2 @@
-geckodriver-v0.28.0-linux32.tar.gz
-.environments
+.vscode
+virtual_env
