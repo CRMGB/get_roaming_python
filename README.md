@@ -4,8 +4,6 @@ calling back to the UK, texting back to the UK, receiving a call and using inter
 from the following countries:
     Brazil, South Africa, Portugal, Chile, Iceland, China, Madagascar.
 
-It is set up for Firefox only.
+To see the tables extracted, just search for the mentioned countries: http://www.three.co.uk/Support/Roaming_and_international/Roaming_abroad
 
-To start cd to selenium directory an type 'python3 search_roaming.py' or 'python search_roaming.py'
-
-To add more files to .gitignore run --> echo 'environments' >> .gitignore
+It is et up for Firefox only.
