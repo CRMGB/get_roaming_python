@@ -7,3 +7,5 @@ from the following countries:
 It is set up for Firefox only.
 
 To start cd to selenium directory an type 'python3 search_roaming.py' or 'python search_roaming.py'
+
+To add more files to .gitignore run --> echo 'environments' >> .gitignore
