@@ -20,18 +20,23 @@ tables = {
 }
 
 def initialize_selenium():
+    results_dict = {}
     driver = webdriver.Firefox()
     for table, targets in tables.items():
-        loop_countries_tables(driver, table, targets)
+        results = loop_countries_tables(driver, table, targets, results_dict)
+    with open("output/sample.json", "w") as outfile: 
+        json.dump(results, outfile) 
     driver.close()
 
-def loop_countries_tables(driver, table, targets):
+def loop_countries_tables(driver, table, targets, results_dict):
     for country, website in targets.items():
-        print(website, "\n")
         driver.get(website)
         root = lxml.html.fromstring(driver.page_source, table)
         allowances = extract_table(root, table)
-        print(country, "--> ", allowances)
+        allowances['website'] = website
+        results_dict[country] = allowances
+    return results_dict
+
 
 def extract_table(root, table):
     table_allowances = {}
