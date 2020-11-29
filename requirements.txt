@@ -1,0 +1,16 @@
+
+
+First you need to install pip:
+    - https://www.makeuseof.com/tag/install-pip-for-python/
+    - This case is for Linux:
+        - sudo apt-get install python3-pip
+        - pip install -U pip
+
+Install selenium:
+    - Docs: https://selenium-python.readthedocs.io/
+    - pip install selenium
+
+To start cd to selenium directory an type 'python3 search_roaming.py' or 'python search_roaming.py'
+
+To add more files to .gitignore run --> echo 'file or folder to include' >> .gitignore
+

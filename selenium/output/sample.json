@@ -1,0 +1,120 @@
+{
+    "Brazil": {
+        "Calling a UK number": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Texts to UK": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Receiving calls from any number": {
+            "With allowance remaining": "Free",
+            "Outside your allowance": "Free"
+        },
+        "Using internet and data": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate "
+        },
+        "website": "http://www.three.co.uk/support/roaming/brazil"
+    },
+    "Portugal": {
+        "Calling a UK number": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Texts to UK": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Receiving calls from any number": {
+            "With allowance remaining": "Free",
+            "Outside your allowance": "Free"
+        },
+        "Using internet and data": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate "
+        },
+        "website": "http://www.three.co.uk/support/roaming/portugal"
+    },
+    "Chile": {
+        "Calling a UK number": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Texts to UK": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Receiving calls from any number": {
+            "With allowance remaining": "Free",
+            "Outside your allowance": "Free"
+        },
+        "Using internet and data": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate "
+        },
+        "website": "http://www.three.co.uk/support/roaming/chile"
+    },
+    "Iceland": {
+        "Calling a UK number": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Texts to UK": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate"
+        },
+        "Receiving calls from any number": {
+            "With allowance remaining": "Free",
+            "Outside your allowance": "Free"
+        },
+        "Using internet and data": {
+            "With allowance remaining": "Comes out of your allowance",
+            "Outside your allowance": "Standard UK rate "
+        },
+        "website": "http://www.three.co.uk/support/roaming/iceland"
+    },
+    "South Africa": {
+        "Calling a UK number.": {
+            "Cost": "\u00a31.40\u00a0per minute."
+        },
+        "Texts to UK.": {
+            "Cost": "35p\u00a0per text."
+        },
+        "Receiving calls from any number.": {
+            "Cost": "99p\u00a0per minute."
+        },
+        "Using internet and data.": {
+            "Cost": "\u00a33\u00a0per MB."
+        },
+        "website": "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306363715"
+    },
+    "China": {
+        "Calling a UK number.": {
+            "Cost": "\u00a32\u00a0per minute."
+        },
+        "Texts to UK.": {
+            "Cost": "35p\u00a0per text."
+        },
+        "Receiving calls from any number.": {
+            "Cost": "\u00a31.25\u00a0per minute."
+        },
+        "Using internet and data.": {
+            "Cost": "\u00a36\u00a0per MB."
+        },
+        "website": "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306373940"
+    },
+    "Madagascar": {
+        "Calling a UK number.": {
+            "Cost": "\u00a32\u00a0per minute."
+        },
+        "Texts to UK.": {
+            "Cost": "35p\u00a0per text."
+        },
+        "Receiving calls from any number.": {
+            "Cost": "\u00a31.25\u00a0per minute."
+        },
+        "website": "http://www.three.co.uk/Support/Roaming_and_international/Mobile_roaming?content_aid=1214306362583"
+    }
+}
